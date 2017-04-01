@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.debop:hibernate-redis:2.3.2">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.debop/hibernate-redis/2.3.2/98fd5c806acb9b6e8eea1958d670f4b8f1b16739/hibernate-redis-2.3.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.debop/hibernate-redis/2.3.2/11cdbf72688443460c8c6625a33a0ac245bab30f/hibernate-redis-2.3.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

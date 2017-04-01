@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+
+        <property name="connection.url">jdbc:mysql://localhost:3306/JoyfulKitchenv2?serverTimezone=UTC</property>
+
+        <property name="connection.username">root</property>
+
+        <property name="connection.password">root</property>
+
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+
+
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+
+        <mapping class="edu.nf.JoyfulKitchen.bean.MaterialType"/>
+        <mapping class="edu.nf.JoyfulKitchen.bean.Material"/>
+        <mapping class="edu.nf.JoyfulKitchen.bean.Meau"/>
+        <mapping class="edu.nf.JoyfulKitchen.bean.MeauAndFoodMaterial"/>
+        <mapping class="edu.nf.JoyfulKitchen.bean.MeauType"/>
+        <mapping class="edu.nf.JoyfulKitchen.bean.Procedure"/>
+        <mapping class="edu.nf.JoyfulKitchen.bean.User"/>
+
+    </session-factory>
+
+</hibernate-configuration>
