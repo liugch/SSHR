@@ -1,7 +1,8 @@
 package edu.nf.JoyfulKitchen.service;
 
 import edu.nf.JoyfulKitchen.bean.User;
-import edu.nf.JoyfulKitchen.dao.UserDao;
+import edu.nf.JoyfulKitchen.dao.imple.UserDao;
+import org.hibernate.service.spi.ServiceException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -15,11 +16,11 @@ public class UserService {
     @Resource
     private UserDao userDao;
 
-    @Transactional(readOnly = true)
-    public List<User> allUser(){
-        List<User> list = userDao.getList();
+    public List<User> getAllUser() throws ServiceException {
+        List<User> list = null;
+        list = userDao.getList();
+
         return list;
     }
-
 
 }

@@ -6,18 +6,18 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
 
-
     <mvc:annotation-driven/>
+
+    <context:component-scan base-package="edu.nf.JoyfulKitchen.controller"/>
+
 
     <!-- 以下 validator  ConversionService 在使用 mvc:annotation-driven 会 自动注册-->
     <bean id="validator"
           class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
-        <property name="providerClass"  value="org.hibernate.validator.HibernateValidator"/>
+        <property name="providerClass" value="org.hibernate.validator.HibernateValidator"/>
         <!-- 如果不加默认到 使用classpath下的 ValidationMessages.properties -->
         <property name="validationMessageSource" ref="messageSource"/>
     </bean>
-
-    <context:component-scan base-package="edu.nf.JoyfulKitchen.controller"/>
 
 
     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -44,7 +44,7 @@
     <!-- SpringMVC上传文件时，需要配置MultipartResolver处理器 -->
     <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
         <property name="defaultEncoding" value="UTF-8"/>
-         <!--最大能上传的大小 20M-->
+        <!--最大能上传的大小 20M-->
         <property name="maxUploadSize" value="20971520"/>
         <!--每个文件的大小5M-->
         <property name="maxUploadSizePerFile" value="5242880"/>

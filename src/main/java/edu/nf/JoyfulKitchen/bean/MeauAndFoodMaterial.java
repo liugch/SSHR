@@ -10,6 +10,7 @@ package edu.nf.JoyfulKitchen.bean;
         );*/
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -17,7 +18,7 @@ import java.util.Date;
  */
 @Entity
 @Table(name = "tb_meau_foodmaterial")
-public class MeauAndFoodMaterial {
+public class MeauAndFoodMaterial implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

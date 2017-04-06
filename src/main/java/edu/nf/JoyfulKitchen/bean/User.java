@@ -2,6 +2,7 @@ package edu.nf.JoyfulKitchen.bean;
 
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 /*用户*/
 /*
@@ -24,7 +25,7 @@ CREATE  TABLE  tb_user(
 
 @Entity
 @Table(name = "tb_user")
-public class User {
+public class User implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -189,5 +190,19 @@ public class User {
                 ", createTime=" + createTime +
                 ", updateTime=" + updateTime +
                 '}';
+    }
+
+
+
+    public static final String OBJECT_KEY = "USER";
+
+
+
+    public String getKey() {
+        return getId()+"";
+    }
+
+    public String getObjectKey() {
+        return OBJECT_KEY;
     }
 }

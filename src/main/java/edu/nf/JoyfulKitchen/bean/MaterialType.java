@@ -1,6 +1,7 @@
 package edu.nf.JoyfulKitchen.bean;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 /*食材类型*/
@@ -17,7 +18,7 @@ import java.util.List;
  */
 @Entity
 @Table(name = "tb_material_type")
-public class MaterialType {
+public class MaterialType implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

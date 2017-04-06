@@ -1,6 +1,7 @@
 package edu.nf.JoyfulKitchen.bean;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
@@ -23,7 +24,7 @@ CREATE TABLE tb_meau(
  */
 @Entity
 @Table(name = "tb_meau")
-public class Meau {
+public class Meau implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

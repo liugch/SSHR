@@ -27,6 +27,8 @@
         <mapping class="edu.nf.JoyfulKitchen.bean.Procedure"/>
         <mapping class="edu.nf.JoyfulKitchen.bean.User"/>
 
+
+
     </session-factory>
 
 </hibernate-configuration>
